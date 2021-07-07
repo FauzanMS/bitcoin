@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <ul id="ulu">
+            <li ><a id="lil" href="#">HOME</a></li>
+            <li ><a id="lil" href="#">BUY</a></li>
+            <li ><a id="lil" href="#">WHY SHOULD I INVEST</a></li>
+            <li ><a id="lil" href="fuck">REPORT AN ERROR !</a></li>
+        </ul>
+        <button id="btn" onclick="navToggle()">\></button>
+    </nav>
+    </header>
+    <div class="background">
+    <div class="cover">
+        <img id="video" src="bit.gif">
+        <div class="currency">
+        <h1>BITCOIN</h1>
+        </br>
+        <span id="bitcoin"></span> <span id="usd"> USD</span>
+    </div>
+    </div>
+    </div>
+    <script>
+        function navToggle(){
+            let para= document.getElementById('ulu');
+            if(para.style.display=='none'){
+            para.style.display = 'flex';            
+        }
+        else{
+        para.style.display='none';
+            }
+        }
+    const myReq = new XMLHttpRequest();
+    myReq.onload = function(){
+        const data = JSON.parse(this.responseText);
+        document.getElementById('bitcoin').innerText=data.ticker.price;
+    };
+    myReq.onerror=function(err){
+        document.getElementsByTagName(p).innerText="Some Error has occured";
+    };
+    myReq.open('GET','https://api.cryptonator.com/api/ticker/btc-usd');
+    myReq.send();
+    </script>
+</body>
+</html>

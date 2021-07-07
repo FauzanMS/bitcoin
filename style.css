@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat",monospace;
+}
+.background{
+    background-image: url(back1.jpg);
+    height: 800px;
+    background-size: cover;
+    display: flex;
+    justify-content:left
+}
+.cover{
+    box-shadow: 0 0 10px red , 0 0 20px red , 0 0 40px red;
+    width: 100%;
+    max-width: 360px;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 5%;
+    border-radius: 70px;
+    background-color: rgba(2, 20, 70, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+}
+.currency{
+    margin-top: 10%;
+    font-size: 85%;
+    color: white;
+}
+header{
+    position: fixed;
+    width: 100%;
+}
+nav{
+    background-color: rgb(3, 10, 29);
+    padding: 2px;
+}
+nav button{
+    display: none;
+}
+#ulu{
+    display: flex;
+    justify-content: space-evenly;
+}
+#lil{
+    text-decoration: none;
+    color: rgb(248, 2, 105);
+}
+a:hover{
+    color: rgb(174, 248, 2);
+}
+li{
+    text-decoration: none;
+    list-style: none;
+    margin-right: 2%;
+}
+#video{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -17%;
+    border-radius: 50px;
+}
+#bitcoin{
+    font-size: 300%;
+}
+#usd{
+    font-size: 180%;
+    color: rgb(248, 2, 105);
+}
+.cover:hover{
+    box-shadow: 0 0 10px rgb(174, 248, 2),0 0 20px rgb(174, 248, 2),0 0 40px rgb(174, 248, 2) ;
+}
+@media screen and (max-width:1024px){
+   .background{
+       background-image: url(back3.jpg);
+       background-size: cover;
+       background-repeat: no-repeat;
+       height: 900px;
+   }
+   .cover{
+       width: 100%;
+       max-width: 400px;
+   }
+}
+@media screen and (max-width:768px){
+    .background{
+        background-image: url(back2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 900px;
+    }
+    nav{
+        display: flex;
+        justify-content:flex-end;
+        padding-right: 5%;
+    }
+    nav button{
+        padding: .5rem .5rem;
+        position: fixed;
+        display: block;
+        background-color: rgb(248, 2, 105);
+        outline: none;
+        border-radius: 20px;
+        border:1px solid black;
+        color : rgb(3, 10, 29);
+        font-size: 100%;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    #ulu{
+        display: none;
+        flex-direction: column;
+        justify-items: center;
+        width: 100%;
+        height: 500px;
+        cursor: pointer;
+    }
+    a:hover{
+        color: rgb(174, 248, 2);
+    }
+    .cover{
+        width: 100%;
+        max-width: 400px;
+    }
+    nav{
+        background-color: rgba(2, 20, 70, 0.9);
+    }  
+ }
+@media screen and (max-width:450px){
+    .background{
+        background-image: url(back1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 820px;
+    }
+    .cover{
+        width:100%;
+        height: 60%;
+        max-width: 350px;
+    }
+}
